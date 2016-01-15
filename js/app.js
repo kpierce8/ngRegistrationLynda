@@ -1,4 +1,5 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'firebase'])
+.constant('FIREBASE_URL', 'https://popping-heat-5540.firebaseio.com/');
 
 
 myApp.config(['$routeProvider', function($routeProvider){

@@ -1,10 +1,13 @@
-myApp.controller('RegistrationController', ['$scope', function($scope){
-	$scope.message = "welcome to the app";
+myApp.controller('RegistrationController', ['$scope',  'Authentication', 
+	function($scope, Authentication){
+	
 
 
-	$scope.submit = function(){
-		$scope.message = "You're in tube user " + $scope.user.email;
+$scope.login = function(){
+ Authentication.login($scope.user);
+}; //login
 
-
-	};
-}]); 
+	$scope.register = function(){
+		Authentication.register($scope.user);
+	}; //register
+}]); //controller
