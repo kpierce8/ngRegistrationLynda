@@ -4,4 +4,9 @@
 <ul>
 <li><a ng-hide="currentUser" href="#/login">Login</a></li>
 <li><a ng-hide="currentUser" href="#/register">Register</a></li>
+<li >
+	<a ng-show="currentUser" href="#/meetings">Meetings
+		<span class="badge" ng-show="howManyMeetings">{{ howManyMeetings }}</span>
+	</a>
+</li>
 </ul>
