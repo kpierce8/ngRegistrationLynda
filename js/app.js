@@ -2,7 +2,7 @@ var myApp = angular.module('myApp', ['ngRoute', 'firebase'])
 .constant('FIREBASE_URL', 'https://ngdata77.firebaseio.com/');
 
 
-myApp.run(['$rootScope', '$location', 
+angular.module('myApp').run(['$rootScope', '$location', 
 	function($rootScope, $location){
 		$rootScope.$on('$routeChangeError', 
 			function(event, next, previous, error){
@@ -13,7 +13,7 @@ myApp.run(['$rootScope', '$location',
 		});
 	}]);
 
-myApp.config(['$routeProvider', function($routeProvider){
+angular.module('myApp').config(['$routeProvider', function($routeProvider){
 	$routeProvider.
 		when('/login', {
 			templateUrl: 'views/login.html',
